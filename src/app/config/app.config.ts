@@ -59,9 +59,6 @@ export const AppConfig: Config = {
     swapAccountListNis1: 'swap-account-list-nis1',
     swapAccountList: 'swap-account-list',
     swapListAccountsNis1: 'swap-list-accounts-nis1',
-
-
-
     selectNode: 'select-node',
     selectTypeCreationWallet: 'select-type-creation-wallet',
     selectTypeCreationAccount: 'select-type-creation-account',
@@ -78,6 +75,7 @@ export const AppConfig: Config = {
     transferXpxNis1: 'transfer-xpx-nis1',
     walletNis1AccountConsigner: 'wallet-nis1-account-consigner',
     exportWallet: 'export-wallet',
+    videoCall:'video-call'
   }
 };
 
@@ -142,8 +140,6 @@ export interface Config {
     swapTransferAssetsLogged: string;
     swapAccountListNis1: string;
     swapAccountList: string;
-
-
     selectNode: string;
     selectTypeCreationWallet: string;
     selectTypeCreationAccount: string;
@@ -160,6 +156,6 @@ export interface Config {
     transferXpxNis1: string;
     walletNis1AccountConsigner: string;
     exportWallet: string;
-
+    videoCall: string;
   };
 }

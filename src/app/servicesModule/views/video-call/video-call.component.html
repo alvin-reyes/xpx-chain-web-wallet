@@ -1,0 +1,68 @@
+<div class="container mt-3rem mb-1rem animated fadeIn">
+  
+    <!-- Progress bar -->
+  <div class="row">
+    <div class="col-12">
+      <mdb-progress-bar class="progress primary-color-dark" mode="indeterminate" *ngIf="searching">
+      </mdb-progress-bar>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row mt-2rem">
+      <div class="col-12 mx-auto">
+        <div class="table-responsive table-hover">
+
+          <div
+          class="col-12 col-md-12 col-lg-2 d-flex align-items-center justify-content-center background-dark-green-plus pt-05rem">
+          <button mdbBtn type="submit" rounded="true" mdbWavesEffect
+            class="btn-proximax" size="md" (click)="buildConference()">
+            <span class="fs-1em color-white">Create</span>
+          </button>
+        </div>
+
+          <table mdbTable #tableEl="mdbTable" id="mdbTable" striped="true"
+            class="table table-hover table-bordered table-hover table-sm z-depth-0" cellspacing="0" width="100%"
+            borderless="true">
+
+
+            <!--Table head-->
+
+            <thead>
+              <tr class="header-backg">
+                <ng-container *ngFor="let head of headElements">
+                  <th scope="col" class="text-center fw-400 th-sm">{{head}}</th>
+                </ng-container>
+              </tr>
+            </thead>
+
+            <!--Table body-->
+            <tbody class="background-white">
+              <ng-container *ngFor="let conf of conferenceLinks">
+                <tr class="mouse-pointer">
+                  <td class="text-center th-sm description-dark-green">
+                      {{conf.conferenceId}}
+                  </td>
+                  <td class="text-center th-sm description-dark-green">
+                    <a href="{{conf.conferenceLink}}" target="_blank">Launch</a>
+                  </td>                 
+                </tr>
+              </ng-container>
+              <ng-container *ngIf="conferenceLinks.length === 0 && !searching">
+                <tr>
+                  <td colspan="3" class="txt-a-center">nothing to show</td>
+                </tr>
+              </ng-container>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-12 d-flex justify-content-center mx-auto">
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  

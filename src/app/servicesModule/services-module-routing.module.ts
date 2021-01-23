@@ -11,6 +11,7 @@ import { DeleteWalletComponent } from './views/wallet/delete-wallet/delete-walle
 import { NotificationComponent } from './views/notification/notification.component';
 import { CreateGiftComponent } from './views/gift/create-gift/create-gift.component';
 import { RedeemGiftCardComponent } from './views/gift/redeem-gift-card/redeem-gift-card.component';
+import { VideoCallComponent } from './views/video-call/video-call.component';
 
 const routes: Routes = [
   {
@@ -121,6 +122,16 @@ const routes: Routes = [
   }, {
     path: AppConfig.routes.deleteWallet,
     component: DeleteWalletComponent,
+    data: {
+      meta: {
+        title: 'deleteWallet.title',
+        description: 'deleteWallet.text',
+        override: true,
+      }
+    }
+  }, {
+    path: AppConfig.routes.videoCall,
+    component: VideoCallComponent,
     data: {
       meta: {
         title: 'deleteWallet.title',

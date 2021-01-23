@@ -12,6 +12,7 @@ import { NotificationComponent } from './views/notification/notification.compone
 import { CreateGiftComponent } from './views/gift/create-gift/create-gift.component';
 import { RedeemGiftCardComponent } from './views/gift/redeem-gift-card/redeem-gift-card.component';
 import { ConfirmRedeemGitfCardComponent } from './components/confirm-redeem-gitf-card/confirm-redeem-gitf-card.component';
+import { VideoCallComponent } from './views/video-call/video-call.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ConfirmRedeemGitfCardComponent } from './components/confirm-redeem-gitf
     NotificationComponent,
     CreateGiftComponent,
     RedeemGiftCardComponent,
-    ConfirmRedeemGitfCardComponent
+    ConfirmRedeemGitfCardComponent,
+    VideoCallComponent
   ],
   schemas: [NO_ERRORS_SCHEMA],
   imports: [

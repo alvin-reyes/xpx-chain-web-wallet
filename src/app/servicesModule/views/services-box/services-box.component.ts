@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppConfig } from '../../../config/app.config';
 import { ServicesModuleService, StructureService } from '../../services/services-module.service';
 import { environment } from '../../../../environments/environment';
+import { VideoCallComponent } from 'src/app/servicesModule/views/video-call/video-call.component';
 
 @Component({
   selector: 'app-services-box',
@@ -548,20 +549,14 @@ export class ServicesBoxComponent implements OnInit {
       children: {
         start: this.services.buildStructureService(
           'Start',
-          false,
+          true,
           '',
           '',
-          ''
-        ), schedule: this.services.buildStructureService(
-          'Schedule',
-          false,
-          '',
-          '',
-          ''
+          AppConfig.routes.videoCall
         )
       },
       viewChildren: true,
-      className: 'disable-module'
+      className: 'enable-module'
     };
 
 
